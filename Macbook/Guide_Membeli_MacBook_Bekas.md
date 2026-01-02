@@ -382,4 +382,4 @@ _________________________________
 
 ---
 
-*Guide ini dibuat berdasarkan pengalaman dan riset tentang kesehatan SSD MacBook. Untuk update terbaru, cek kembali sumber-sumber terkait.*
+*Guide ini dibuat berdasarkan pengalaman dan riset tentang kesehatan SSD MacBook. Untuk update terbaru, cek kembali sumber-sumber terkait. Cek juga script checker yang ada pada epo ini.*
