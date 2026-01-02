@@ -72,7 +72,7 @@ brew install htop
 
 ### Step 1: Cek Kesehatan SSD (PALING PENTING!)
 
-#### Jalankan command berikut:
+#### Jalankan command berikut
 
 ```bash
 # Full SMART data
@@ -82,7 +82,7 @@ sudo smartctl -a disk0
 sudo smartctl -a disk0 | grep -E "Percentage|Written|Temperature|Health|Power On|Unsafe"
 ```
 
-#### Interpretasi Hasil:
+#### Interpretasi Hasil
 
 | Metrik | ✅ Aman | ⚠️ Waspada | ❌ Hindari |
 |--------|---------|------------|-----------|
@@ -93,14 +93,14 @@ sudo smartctl -a disk0 | grep -E "Percentage|Written|Temperature|Health|Power On
 | **Unsafe Shutdowns** | < 20 | 20-100 | > 100 |
 | **Temperature** | < 45°C | 45-55°C | > 60°C |
 
-#### 🚨 Red Flags (Kemungkinan Data Dimanipulasi):
+#### 🚨 Red Flags (Kemungkinan Data Dimanipulasi)
 
 - ❌ Semua nilai = 0 (terlalu sempurna)
 - ❌ Power-On Hours = 0 tapi fisik sudah lecet/bekas
 - ❌ TBW = 0 persis
 - ❌ Nilai tidak konsisten dengan umur device
 
-#### Contoh Output yang Sehat:
+#### Contoh Output yang Sehat
 
 ```
 SMART overall-health self-assessment test result: PASSED
@@ -122,7 +122,7 @@ Media and Data Integrity Errors:    0
 system_profiler SPPowerDataType | grep -E "Cycle Count|Condition|Maximum Capacity|Full Charge"
 ```
 
-#### Interpretasi:
+#### Interpretasi
 
 | Metrik | ✅ Bagus | ⚠️ Cukup | ❌ Buruk |
 |--------|----------|----------|----------|
@@ -130,7 +130,7 @@ system_profiler SPPowerDataType | grep -E "Cycle Count|Condition|Maximum Capacit
 | **Maximum Capacity** | > 85% | 70-85% | < 70% |
 | **Condition** | Normal | - | Service Recommended |
 
-#### Contoh Output yang Sehat:
+#### Contoh Output yang Sehat
 
 ```
 Cycle Count: 250
@@ -151,6 +151,7 @@ neofetch
 ```
 
 **Yang perlu dicatat:**
+
 - Model Identifier
 - Serial Number
 - RAM (Memory)
@@ -165,6 +166,7 @@ neofetch
 3. **Pastikan match** dengan stiker di bawah MacBook dan box
 
 **Verifikasi:**
+
 - [ ] Serial number valid di website Apple
 - [ ] Match dengan fisik device
 - [ ] Match dengan box (jika ada)
@@ -182,12 +184,14 @@ neofetch
    - System Settings > Apple ID > iCloud > Find My Mac
 
 3. Cek **tidak ada MDM Profile** (device perusahaan):
+
    ```bash
    # Cek profiles
    profiles list
    ```
+
    Atau: System Settings > Privacy & Security > Profiles
-   
+
    > ⚠️ Jika ada MDM Profile, device mungkin milik perusahaan - HINDARI!
 
 ---
@@ -195,6 +199,7 @@ neofetch
 ### Step 6: Cek Fisik Device
 
 #### Layar
+
 - [ ] Tidak ada dead pixel (test dengan gambar putih polos)
 - [ ] Tidak ada burn-in (test dengan gambar hitam)
 - [ ] Tidak ada stain/noda
@@ -202,17 +207,20 @@ neofetch
 - [ ] Brightness merata
 
 #### Keyboard
+
 - [ ] Semua tombol berfungsi
 - [ ] Tidak ada tombol yang macet
 - [ ] Backlight berfungsi (jika ada)
 - [ ] Touch Bar berfungsi (jika ada)
 
 #### Trackpad
+
 - [ ] Force Touch berfungsi
 - [ ] Multi-gesture berfungsi
 - [ ] Tidak ada dead zone
 
 #### Port & Konektivitas
+
 - [ ] Semua USB-C port berfungsi
 - [ ] Headphone jack berfungsi
 - [ ] MagSafe charging berfungsi (jika ada)
@@ -220,15 +228,18 @@ neofetch
 - [ ] Bluetooth berfungsi
 
 #### Speaker & Audio
+
 - [ ] Speaker kiri dan kanan berfungsi
 - [ ] Tidak ada suara crackling
 - [ ] Microphone berfungsi (test dengan Voice Memo)
 
 #### Kamera
+
 - [ ] Webcam berfungsi
 - [ ] Kualitas gambar bagus
 
 #### Body
+
 - [ ] Tidak ada dent/penyok
 - [ ] Tidak ada crack
 - [ ] Hinge tidak longgar
@@ -248,12 +259,13 @@ rm /tmp/testfile
 ```
 
 **Bandingkan hasil dengan:**
+
 - [Geekbench Browser](https://browser.geekbench.com/mac-benchmarks)
 - Score jauh lebih rendah = kemungkinan ada throttling/masalah
 
 ---
 
-## ⚠️ Jangan Beli Kalau:
+## ⚠️ Jangan Beli Kalau
 
 | Kondisi | Alasan |
 |---------|--------|
@@ -270,23 +282,17 @@ rm /tmp/testfile
 
 ## 💡 Tips Tambahan
 
-### Tempat Beli yang Aman:
-- ✅ Apple Refurbished (paling aman)
-- ✅ iBox Trade-in/Bekas Certified
-- ✅ Tokopedia/Shopee Mall (ada proteksi)
-- ⚠️ Facebook Marketplace (hati-hati)
-- ⚠️ OLX/Kaskus (harus COD)
-
-### Negosiasi Harga:
+### Negosiasi Harga
 
 Gunakan kondisi berikut untuk minta diskon:
+
 - Battery cycle tinggi (> 300)
 - SSD usage tinggi (> 20%)
 - Garansi sudah habis
 - Ada scratch/dent minor
 - Tidak ada box/kelengkapan
 
-### Rekomendasi Model (2026):
+### Rekomendasi Model - Range Kisaran Harga(2026)
 
 | Budget | Model | RAM | SSD |
 |--------|-------|-----|-----|
