@@ -1,0 +1,18 @@
+# Ignore everything
+*
+
+# But not these folders
+!Macbook/
+!Macbook/**
+!Other-Windows/
+!Other-Windows/**
+
+# And not gitignore itself
+!.gitignore
+
+# Optional: Include README if you have one
+!README.md
+
+# Always ignore system files
+.DS_Store
+**/.DS_Store
